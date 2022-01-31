@@ -17,8 +17,8 @@ Code to scrape [Morning Consult](www.morningconsult.com) for all stories, iterat
 
 Take something like this:
 
-![Typical table of contents page](mcimg.png)
+![Typical table of contents page](img/mcimg.png)
 
 And have it look like this
 
-![Typical table of contents page](mcimg2.png)
+![Typical table of contents page](img/mcimg2.png)

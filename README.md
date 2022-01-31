@@ -11,8 +11,8 @@ the TOC is written to an html file that also lives at the Box location.
 
 Take something like this:
 
-![Typical table of contents page](mcimg.png)
+![Typical table of contents page](img/mcimg.png)
 
 And have it look like this
 
-![Typical table of contents page](mcimg2.png)
+![Typical table of contents page](img/mcimg2.png)
