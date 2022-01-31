@@ -6,6 +6,6 @@
 data
 *.rds
 *.udpipe
-*.png
 *.css
+gsp_logo_lumen.png
 
