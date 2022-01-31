@@ -1,0 +1,66 @@
+---
+title: "Morning Consult Survey Questions"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    theme: lumen
+    css: styles.css
+
+---
+
+---
+logo: `r logo`
+data: `r data`
+---
+<style>
+.navbar, [data-toggle=tab], .navbar-brand  {   background-color:white; border:2px; border-color:lightgray; color:white; }
+
+.navbar-logo img {
+    position: relative;
+    right: 0px;
+}
+</style>
+
+```{r}
+pacman::p_load(tidyverse, glue, flexdashboard, knitr, DT, highcharter)
+df <- readRDS(data)
+```
+
+Question bank {data-orientation=rows}
+=======================================================================
+
+Row {data-height=10}
+-----------------------------------------------------------------------
+Morning Consult is a reputable survey company that is very active in polling the U.S. about current events, trending stories, and politics. The company also frequently releases crosstabs of its survey results, which are being collected at [this link](https://gsp.box.com/s/fccjza13q11539vx4x2h8cjdh9lrpg9l){target='_blank'}.<br/><br/>Below is a running list of questions asked by Morning Consult. Keywords from the questions have been split out and all columns are searchable. If there is a question of interest, simply click the link above and download the pdf file that matches the "Survey Number" in the table below. Additionally, if the survey was referenced in an article on Morning Consult, a link is provided (it's possible that some links may be dead). <br/><br/>
+ 
+Row 
+-----------------------------------------------------------------------
+
+## Survey Questions 
+
+```{r}
+df %>% 
+  distinct(filenumber, V1, .keep_all = TRUE) %>% 
+  mutate(link = "Link",
+  link = paste0('<a href="',story_link,'"target="_blank">',link ,"</a>")) %>%
+  select(
+    `Story Date` = story_date,
+    `Story Link` = link,
+    `Survey Date` = survey_date,
+    `Survey Number` = filenumber,
+    `Sample Pop` = sample,
+    Keywords = keywords,
+    `Question ID` = V1,
+    Question = question) %>%
+  DT::datatable(fillContainer = FALSE, filter = 'top',
+                rownames = FALSE,
+                options = list(pageLength = 40,
+                               columnDefs = list(list(targets = 1, searchable = FALSE))),
+                escape = 1)
+
+```
+
+
+
+
+
