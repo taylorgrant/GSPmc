@@ -90,7 +90,7 @@ extract_links <- function() {
 # and they are pdf's. We want those links along with the
 # links to the stories that provide context about them
 
-extract_crosstab_links <- function(l) {
+extract_crosstab_links <- possibly(function(l) {
 
   get_pdf <- function(l) {
     l %>%
@@ -109,7 +109,7 @@ extract_crosstab_links <- function(l) {
   # if p is empty, the whole tibble is empty
   tmpout <- tibble(story_link = l,
                    pdf_link = p)
-}
+}, otherwise = NA)
 
 
 # -------------------------------------------------------------------------
@@ -129,16 +129,16 @@ extract_filenumber <- function(x) {
 # -------------------------------------------------------------------------
 
 ## check to see if pdf already processed; if not, put into new folder ##
-pdf_download <- function(l, f) {
+pdf_download <- possibly(function(l, f) {
 
   # check to see if previously processed #
   destfile <- glue(here("data", "mc_crosstabs", "processed", "{f}.pdf"))
   newfile <- glue(here("data", "mc_crosstabs", "new", "{f}.pdf"))
 
   if (!file.exists(destfile)) {
-    download.file(l, newfile)
+    download.file(l, newfile, quiet = TRUE)
   }
-}
+}, otherwise = NULL)
 
 # -------------------------------------------------------------------------
 
