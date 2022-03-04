@@ -10,7 +10,7 @@ pdf_toc <- function(file) {
 
   ## move files after they'e been read in ##
   file.copy(from = here::here('data', 'mc_crosstabs', 'new', file),
-            to = glue::glue("~/Box/Morning Consult Surveys/surveys/{file}"))
+            to = glue::glue("~/Library/CloudStorage/Box-Box/Morning Consult Surveys/surveys/{file}"))
   unlink(glue::glue(here::here('data', 'mc_crosstabs', 'new', file)))
 
   ## which pages are table of contents

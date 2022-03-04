@@ -7,7 +7,7 @@ render_mc_toc <- function() {
   logo <- file.path(d, "gsp_logo_lumen.png")
 
   rmarkdown::render(input = file.path(d, "mc_toc.Rmd"),
-                    output_file = "~/Box/Morning Consult Surveys/mc_TOC.html",
+                    output_file = "~/Library/CloudStorage/Box-Box/Morning Consult Surveys/mc_TOC.html",
                     params = list(logo = logo,
                                   data = data))
 }
