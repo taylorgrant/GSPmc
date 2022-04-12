@@ -136,7 +136,7 @@ pdf_download <- possibly(function(l, f) {
   newfile <- glue(here("data", "mc_crosstabs", "new", "{f}.pdf"))
 
   if (!file.exists(destfile)) {
-    download.file(l, newfile, quiet = TRUE)
+    download.file(l, newfile, quiet = FALSE)
   }
 }, otherwise = NULL)
 
