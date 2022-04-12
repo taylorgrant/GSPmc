@@ -42,7 +42,7 @@ Question bank {data-orientation=rows}
 Row {data-height=10}
 -----------------------------------------------------------------------
 <p class="comment">
-Morning Consult is a reputable survey company that is very active in polling the U.S. about current events, trending stories, and politics. The company also frequently releases crosstabs of its survey results, which are being collected at [this link](https://gsp.box.com/s/fccjza13q11539vx4x2h8cjdh9lrpg9l){target='_blank'}.<br/><br/>Below is a running list of questions asked by Morning Consult. All columns are searchable. If there is a question of interest, simply click the link above and download the pdf file that matches the "Survey Number" in the table below. Additionally, if the survey was referenced in an article on Morning Consult, a link is provided to give additional context (it's possible that some links may be dead). <br/><br/>
+Morning Consult is a reputable survey company that is very active in polling the U.S. about current events, trending stories, and politics. The company also frequently releases crosstabs of its survey results, which are being collected at [this link](https://gsp.box.com/s/b5u4ieowvkkaifiea9hsz4jko3i43jhq){target='_blank'}.<br/><br/>Below is a running list of questions asked by Morning Consult. All columns are searchable. If there is a question of interest, simply click the link above and download the pdf file that matches the "Survey Number" in the table below. Additionally, if the survey was referenced in an article on Morning Consult, a link is provided to give additional context (it's possible that some links may be dead). <br/><br/>
 </p>
 Row 
 -----------------------------------------------------------------------
